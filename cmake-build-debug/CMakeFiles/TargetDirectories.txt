@@ -1,0 +1,3 @@
+C:/Study/PJC/Pokemonv0.5/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Study/PJC/Pokemonv0.5/cmake-build-debug/CMakeFiles/Pokemonv0_5.dir
+C:/Study/PJC/Pokemonv0.5/cmake-build-debug/CMakeFiles/rebuild_cache.dir

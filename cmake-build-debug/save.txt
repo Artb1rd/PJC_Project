@@ -1,0 +1,210 @@
+1
+artem{
+
+	Name: Vaporeon
+	Type: Water
+	Health: 65
+	Strength: 7024
+	Dexterity: 0.250000
+	Fainted: 0
+	Exp: 35
+	SpecalMove: Aurora's fountain
+
+	Name: Flareon
+	Type: Fire
+	Health: 45
+	Strength: 6
+	Dexterity: 0.100000
+	Fainted: 0
+	Exp: 0
+	SpecalMove: Blaze laser
+
+	Name: Glaceon
+	Type: Ice
+	Health: 45
+	Strength: 4
+	Dexterity: 0.200000
+	Fainted: 0
+	Exp: 0
+	SpecalMove: Glacier
+
+	Name: Pidgey
+	Type: Air
+	Health: 40
+	Strength: 4
+	Dexterity: 0.150000
+	Fainted: 0
+	Exp: 0
+	SpecalMove: Wind fury
+
+	Name: Geodude
+	Type: Earth
+	Health: 55
+	Strength: 4
+	Dexterity: 0.100000
+	Fainted: 0
+	Exp: 0
+	SpecalMove: Rock rumble
+
+	Name: Steelix
+	Type: Steel
+	Health: 50
+	Strength: 4
+	Dexterity: 0.100000
+	Fainted: 0
+	Exp: 0
+	SpecalMove: Steel wall
+}
+Enemies:{
+			Ava{
+
+			Name: Rhydon
+			Type: Earth
+			Health: 50
+			Strength: 4
+			Dexterity: 0.000015
+			Fainted: 0
+			Exp: 0
+			SpecialMove: Rock rumble
+
+			Name: Alolan Ninetails
+			Type: Ice
+			Health: 50
+			Strength: 5
+			Dexterity: 0.000015
+			Fainted: 0
+			Exp: 0
+			SpecialMove: Glacier
+
+			Name: Vaporeon
+			Type: Water
+			Health: 50
+			Strength: 7000
+			Dexterity: 0.000015
+			Fainted: 0
+			Exp: 0
+			SpecialMove: Aurora's fountain
+
+			Name: Krabby
+			Type: Water
+			Health: 55
+			Strength: 3
+			Dexterity: 0.000020
+			Fainted: 0
+			Exp: 0
+			SpecialMove: Aurora's fountain
+}
+			Ava{
+
+			Name: Alolan Ninetails
+			Type: Ice
+			Health: 50
+			Strength: 5
+			Dexterity: 0.000015
+			Fainted: 0
+			Exp: 0
+			SpecialMove: Glacier
+
+			Name: Rhydon
+			Type: Earth
+			Health: 50
+			Strength: 4
+			Dexterity: 0.000015
+			Fainted: 0
+			Exp: 0
+			SpecialMove: Rock rumble
+
+			Name: Geodude
+			Type: Earth
+			Health: 55
+			Strength: 4
+			Dexterity: 0.000010
+			Fainted: 0
+			Exp: 0
+			SpecialMove: Rock rumble
+
+			Name: Rapidash
+			Type: Fire
+			Health: 45
+			Strength: 5
+			Dexterity: 0.000020
+			Fainted: 0
+			Exp: 0
+			SpecialMove: Blaze laser
+}
+			Oliver{
+
+			Name: Zapdos
+			Type: Air
+			Health: 45
+			Strength: 4
+			Dexterity: 0.000025
+			Fainted: 0
+			Exp: 0
+			SpecialMove: Wind fury
+
+			Name: Onix
+			Type: Earth
+			Health: 50
+			Strength: 5
+			Dexterity: 0.000000
+			Fainted: 0
+			Exp: 0
+			SpecialMove: Rock rumble
+
+			Name: Flareon
+			Type: Fire
+			Health: 45
+			Strength: 6
+			Dexterity: 0.000010
+			Fainted: 0
+			Exp: 0
+			SpecialMove: Blaze laser
+
+			Name: Steelix
+			Type: Steel
+			Health: 50
+			Strength: 4
+			Dexterity: 0.000010
+			Fainted: 0
+			Exp: 0
+			SpecialMove: Steel wall
+}
+			Olivia{
+
+			Name: Rhydon
+			Type: Earth
+			Health: 50
+			Strength: 4
+			Dexterity: 0.000015
+			Fainted: 0
+			Exp: 0
+			SpecialMove: Rock rumble
+
+			Name: Pidgey
+			Type: Air
+			Health: 40
+			Strength: 4
+			Dexterity: 0.000015
+			Fainted: 0
+			Exp: 0
+			SpecialMove: Wind fury
+
+			Name: Glaceon
+			Type: Ice
+			Health: 45
+			Strength: 4
+			Dexterity: 0.000020
+			Fainted: 0
+			Exp: 0
+			SpecialMove: Glacier
+
+			Name: Magneton
+			Type: Steel
+			Health: 50
+			Strength: 3
+			Dexterity: 0.000015
+			Fainted: 0
+			Exp: 0
+			SpecialMove: Steel wall
+}

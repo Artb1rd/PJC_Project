@@ -1,0 +1,72 @@
+\hypertarget{_engine_8h_source}{}\doxysection{Engine.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef POKEMONV0\_5\_ENGINE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define POKEMONV0\_5\_ENGINE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}Game.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <unordered\_map>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{12 \textcolor{keyword}{class }\mbox{\hyperlink{class_engine}{Engine}} \{}
+\DoxyCodeLine{13 \textcolor{keyword}{private}:}
+\DoxyCodeLine{15     \textcolor{keyword}{static} \mbox{\hyperlink{class_game}{Game}} game;}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{keyword}{public}:}
+\DoxyCodeLine{19     \mbox{\hyperlink{class_engine_a8c98683b0a3aa28d8ab72a8bcd0d52f2}{Engine}}();}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{23     \textcolor{keyword}{auto} \mbox{\hyperlink{class_engine_a084bf19b7338a751735416136495b2a0}{createBaseGame}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&difficulty) -\/> void;}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{27     \textcolor{keyword}{auto} \textcolor{keyword}{static} \mbox{\hyperlink{class_engine_a60bfc91d51e534bb04c930127bd58fd9}{getWeaknessesMap}}() -\/> std::unordered\_map<Type, std::vector<Type>>;}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{31     \textcolor{keyword}{auto} \textcolor{keyword}{static} \mbox{\hyperlink{class_engine_aa517e83e7d015871736be56c2bcf8682}{getStrengthMap}}() -\/> std::unordered\_map<Type, std::vector<Type>>;}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{37     \textcolor{keyword}{auto} \textcolor{keyword}{static} \mbox{\hyperlink{class_engine_a001568f5811504eee3d44ef92dfdadbe}{lookForWeakness}}(Type \&attackingType, Type \&defendingType) -\/> bool;}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{43     \textcolor{keyword}{auto} \textcolor{keyword}{static} \mbox{\hyperlink{class_engine_a361757cc9731ece7885568b8f67d36e8}{lookForStrength}}(Type \&attackingType, Type \&defendingType) -\/> bool;}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{47     \textcolor{keyword}{auto} \textcolor{keyword}{static} \mbox{\hyperlink{class_engine_ad43181643a560af0f5a7b3fbe59f01d9}{giveBattleChoice}}() -\/> int;}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{52     \textcolor{keyword}{auto} \textcolor{keyword}{static} \mbox{\hyperlink{class_engine_ae50c43a9679b28975e920514c5bca7b8}{update}}(\mbox{\hyperlink{class_player}{Player}} enemyToFight) -\/> int;}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{55     \textcolor{keyword}{auto} \textcolor{keyword}{static} \mbox{\hyperlink{class_engine_a5b9f2522c3b6e1628d906b40d5398e77}{getHelp}}() -\/> void;}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{58     \textcolor{keyword}{auto} \mbox{\hyperlink{class_engine_aab2f853dd7a7006c943abadac0f264fe}{startGame}}() -\/> void;}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{61     \textcolor{keyword}{auto} \mbox{\hyperlink{class_engine_af62ee1ef206968e82e500631d55f01e3}{loadGame}}(std::ifstream \&fileToLoadFrom) -\/> void;}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{64     \textcolor{keyword}{static} \textcolor{keyword}{auto} \mbox{\hyperlink{class_engine_afa6fed2cdc3cd012407a014bd4be3073}{saveGame}}() -\/> void;}
+\DoxyCodeLine{65 \};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{68 \textcolor{keyword}{const} \textcolor{keyword}{static} std::unordered\_map<Type, std::vector<Type>> weakness = \{}
+\DoxyCodeLine{69         \{Water, std::vector<Type>\{Water\}\},}
+\DoxyCodeLine{70         \{Earth, std::vector<Type>\{Air\}\},}
+\DoxyCodeLine{71         \{Air,   std::vector<Type>\{Earth, Steel\}\},}
+\DoxyCodeLine{72         \{Fire,  std::vector<Type>\{Water, Earth\}\},}
+\DoxyCodeLine{73         \{Ice,   std::vector<Type>\{Water, Fire, Ice\}\},}
+\DoxyCodeLine{74         \{Steel, std::vector<Type>\{Fire, Steel\}\}}
+\DoxyCodeLine{75 \};}
+\DoxyCodeLine{77 \textcolor{keyword}{const} \textcolor{keyword}{static} std::unordered\_map<Type, std::vector<Type>> strength = \{}
+\DoxyCodeLine{78         \{Water, std::vector<Type>\{Earth, Fire\}\},}
+\DoxyCodeLine{79         \{Earth, std::vector<Type>\{Fire, Ice, Steel\}\},}
+\DoxyCodeLine{80         \{Air,   std::vector<Type>\{Ice\}\},}
+\DoxyCodeLine{81         \{Fire,  std::vector<Type>\{Ice, Steel\}\},}
+\DoxyCodeLine{82         \{Ice,   std::vector<Type>\{Earth\}\},}
+\DoxyCodeLine{83         \{Steel, std::vector<Type>\{Water, Air\}\}}
+\DoxyCodeLine{84 \};}
+\DoxyCodeLine{86 \textcolor{keyword}{const} \textcolor{keyword}{static} std::unordered\_map<Type, std::string> typesAsStrings = \{}
+\DoxyCodeLine{87         \{Fire,  \textcolor{stringliteral}{"{}Fire"{}}\},}
+\DoxyCodeLine{88         \{Water, \textcolor{stringliteral}{"{}Water"{}}\},}
+\DoxyCodeLine{89         \{Ice,   \textcolor{stringliteral}{"{}Ice"{}}\},}
+\DoxyCodeLine{90         \{Air,   \textcolor{stringliteral}{"{}Air"{}}\},}
+\DoxyCodeLine{91         \{Earth, \textcolor{stringliteral}{"{}Earth"{}}\},}
+\DoxyCodeLine{92         \{Steel, \textcolor{stringliteral}{"{}Steel"{}}\},}
+\DoxyCodeLine{93 \};}
+\DoxyCodeLine{95 \textcolor{keyword}{const} \textcolor{keyword}{static} std::vector<std::string> names = \{\textcolor{stringliteral}{"{}Liam"{}}, \textcolor{stringliteral}{"{}Olivia"{}}, \textcolor{stringliteral}{"{}Noah"{}}, \textcolor{stringliteral}{"{}Emma"{}}, \textcolor{stringliteral}{"{}Lucas"{}}, \textcolor{stringliteral}{"{}Isabella"{}}, \textcolor{stringliteral}{"{}Oliver"{}},}
+\DoxyCodeLine{96                                                \textcolor{stringliteral}{"{}Amelia"{}}, \textcolor{stringliteral}{"{}James"{}}, \textcolor{stringliteral}{"{}Ava"{}}\};}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//POKEMONV0\_5\_ENGINE\_H}}
+
+\end{DoxyCode}

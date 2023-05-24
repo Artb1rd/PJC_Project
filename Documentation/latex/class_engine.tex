@@ -1,0 +1,137 @@
+\hypertarget{class_engine}{}\doxysection{Engine Class Reference}
+\label{class_engine}\index{Engine@{Engine}}
+
+
+{\ttfamily \#include $<$Engine.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_engine_a8c98683b0a3aa28d8ab72a8bcd0d52f2}\label{class_engine_a8c98683b0a3aa28d8ab72a8bcd0d52f2}} 
+{\bfseries Engine} ()
+\begin{DoxyCompactList}\small\item\em Default constructor to create empty space for \mbox{\hyperlink{class_engine}{Engine}}. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_engine_a084bf19b7338a751735416136495b2a0}{create\+Base\+Game}} (const int \&difficulty) -\/$>$ void
+\item 
+\mbox{\Hypertarget{class_engine_aab2f853dd7a7006c943abadac0f264fe}\label{class_engine_aab2f853dd7a7006c943abadac0f264fe}} 
+auto {\bfseries start\+Game} () -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Starts the main process of the game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_engine_af62ee1ef206968e82e500631d55f01e3}\label{class_engine_af62ee1ef206968e82e500631d55f01e3}} 
+auto {\bfseries load\+Game} (std\+::ifstream \&file\+To\+Load\+From) -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Loads the game from the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static auto \mbox{\hyperlink{class_engine_a60bfc91d51e534bb04c930127bd58fd9}{get\+Weaknesses\+Map}} () -\/$>$ std\+::unordered\+\_\+map$<$ Type, std\+::vector$<$ Type $>$ $>$
+\item 
+static auto \mbox{\hyperlink{class_engine_aa517e83e7d015871736be56c2bcf8682}{get\+Strength\+Map}} () -\/$>$ std\+::unordered\+\_\+map$<$ Type, std\+::vector$<$ Type $>$ $>$
+\item 
+static auto \mbox{\hyperlink{class_engine_a001568f5811504eee3d44ef92dfdadbe}{look\+For\+Weakness}} (Type \&attacking\+Type, Type \&defending\+Type) -\/$>$ bool
+\item 
+static auto \mbox{\hyperlink{class_engine_a361757cc9731ece7885568b8f67d36e8}{look\+For\+Strength}} (Type \&attacking\+Type, Type \&defending\+Type) -\/$>$ bool
+\item 
+static auto \mbox{\hyperlink{class_engine_ad43181643a560af0f5a7b3fbe59f01d9}{give\+Battle\+Choice}} () -\/$>$ int
+\item 
+static auto \mbox{\hyperlink{class_engine_ae50c43a9679b28975e920514c5bca7b8}{update}} (\mbox{\hyperlink{class_player}{Player}} enemy\+To\+Fight) -\/$>$ int
+\item 
+\mbox{\Hypertarget{class_engine_a5b9f2522c3b6e1628d906b40d5398e77}\label{class_engine_a5b9f2522c3b6e1628d906b40d5398e77}} 
+static auto {\bfseries get\+Help} () -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Prints rules for the game. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_engine_afa6fed2cdc3cd012407a014bd4be3073}\label{class_engine_afa6fed2cdc3cd012407a014bd4be3073}} 
+static auto {\bfseries save\+Game} () -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Save the current state of the game to the file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class responsible for main logic within game 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_engine_a084bf19b7338a751735416136495b2a0}\label{class_engine_a084bf19b7338a751735416136495b2a0}} 
+\index{Engine@{Engine}!createBaseGame@{createBaseGame}}
+\index{createBaseGame@{createBaseGame}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{createBaseGame()}{createBaseGame()}}
+{\footnotesize\ttfamily auto Engine\+::create\+Base\+Game (\begin{DoxyParamCaption}\item[{const int \&}]{difficulty }\end{DoxyParamCaption}) -\/$>$ void}
+
+Creates new game depending on value of difficulty 
+\begin{DoxyParams}{Parameters}
+{\em difficulty} & -\/ int \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_engine_aa517e83e7d015871736be56c2bcf8682}\label{class_engine_aa517e83e7d015871736be56c2bcf8682}} 
+\index{Engine@{Engine}!getStrengthMap@{getStrengthMap}}
+\index{getStrengthMap@{getStrengthMap}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{getStrengthMap()}{getStrengthMap()}}
+{\footnotesize\ttfamily auto Engine\+::get\+Strength\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ std\+::unordered\+\_\+map$<$Type, std\+::vector$<$Type$>$$>$\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns strength map for all types \begin{DoxyReturn}{Returns}
+unordered\+\_\+map of type to vector of types 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_engine_a60bfc91d51e534bb04c930127bd58fd9}\label{class_engine_a60bfc91d51e534bb04c930127bd58fd9}} 
+\index{Engine@{Engine}!getWeaknessesMap@{getWeaknessesMap}}
+\index{getWeaknessesMap@{getWeaknessesMap}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{getWeaknessesMap()}{getWeaknessesMap()}}
+{\footnotesize\ttfamily auto Engine\+::get\+Weaknesses\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ std\+::unordered\+\_\+map$<$Type, std\+::vector$<$Type$>$$>$\hspace{0.3cm}{\ttfamily [static]}}
+
+Returns weakness map for all types \begin{DoxyReturn}{Returns}
+unordered\+\_\+map of type to vector of types 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_engine_ad43181643a560af0f5a7b3fbe59f01d9}\label{class_engine_ad43181643a560af0f5a7b3fbe59f01d9}} 
+\index{Engine@{Engine}!giveBattleChoice@{giveBattleChoice}}
+\index{giveBattleChoice@{giveBattleChoice}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{giveBattleChoice()}{giveBattleChoice()}}
+{\footnotesize\ttfamily auto Engine\+::give\+Battle\+Choice (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ int\hspace{0.3cm}{\ttfamily [static]}}
+
+Gives battle choice for main player \begin{DoxyReturn}{Returns}
+int -\/ chosen action by the main player 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_engine_a361757cc9731ece7885568b8f67d36e8}\label{class_engine_a361757cc9731ece7885568b8f67d36e8}} 
+\index{Engine@{Engine}!lookForStrength@{lookForStrength}}
+\index{lookForStrength@{lookForStrength}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{lookForStrength()}{lookForStrength()}}
+{\footnotesize\ttfamily auto Engine\+::look\+For\+Strength (\begin{DoxyParamCaption}\item[{Type \&}]{attacking\+Type,  }\item[{Type \&}]{defending\+Type }\end{DoxyParamCaption}) -\/$>$ bool\hspace{0.3cm}{\ttfamily [static]}}
+
+Looking if attacking pokemon has a strength towards defending pokemon 
+\begin{DoxyParams}{Parameters}
+{\em attacking\+Type} & -\/ type of attacking pokemon \\
+\hline
+{\em defending\+Type} & -\/ type of defending pokemon \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if attacking pokemon is strong to defending pokemon, otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_engine_a001568f5811504eee3d44ef92dfdadbe}\label{class_engine_a001568f5811504eee3d44ef92dfdadbe}} 
+\index{Engine@{Engine}!lookForWeakness@{lookForWeakness}}
+\index{lookForWeakness@{lookForWeakness}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{lookForWeakness()}{lookForWeakness()}}
+{\footnotesize\ttfamily auto Engine\+::look\+For\+Weakness (\begin{DoxyParamCaption}\item[{Type \&}]{attacking\+Type,  }\item[{Type \&}]{defending\+Type }\end{DoxyParamCaption}) -\/$>$ bool\hspace{0.3cm}{\ttfamily [static]}}
+
+Looking if attacking pokemon has a weakness towards defending pokemon 
+\begin{DoxyParams}{Parameters}
+{\em attacking\+Type} & -\/ type of attacking pokemon \\
+\hline
+{\em defending\+Type} & -\/ type of defending pokemon \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if attacking pokemon is weak to defending pokemon, otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_engine_ae50c43a9679b28975e920514c5bca7b8}\label{class_engine_ae50c43a9679b28975e920514c5bca7b8}} 
+\index{Engine@{Engine}!update@{update}}
+\index{update@{update}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily auto Engine\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_player}{Player}}}]{enemy\+To\+Fight }\end{DoxyParamCaption}) -\/$>$ int\hspace{0.3cm}{\ttfamily [static]}}
+
+Updates the game after every battle, regardless the outcome 
+\begin{DoxyParams}{Parameters}
+{\em enemy\+To\+Fight} & -\/ enemy to fight in the next battle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ outcome of the round 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Engine.\+h\item 
+Engine.\+cpp\end{DoxyCompactItemize}

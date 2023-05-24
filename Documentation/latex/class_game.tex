@@ -1,0 +1,82 @@
+\hypertarget{class_game}{}\doxysection{Game Class Reference}
+\label{class_game}\index{Game@{Game}}
+
+
+Class, that is responsible for holding current state of the game.  
+
+
+
+
+{\ttfamily \#include $<$Game.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_ad59df6562a58a614fda24622d3715b65}\label{class_game_ad59df6562a58a614fda24622d3715b65}} 
+{\bfseries Game} ()
+\begin{DoxyCompactList}\small\item\em Default constructor to create empty space for \mbox{\hyperlink{class_game}{Game}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_a883090102428ef5c4b668ca6fb79c788}\label{class_game_a883090102428ef5c4b668ca6fb79c788}} 
+{\bfseries Game} (\mbox{\hyperlink{class_player}{Player}} \&main\+Character, std\+::vector$<$ \mbox{\hyperlink{class_player}{Player}} $>$ enemies)
+\begin{DoxyCompactList}\small\item\em Constructor with all parameters to create working \mbox{\hyperlink{class_game}{Game}}. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_game_ae67780099a7db3f57af21020ff5eeb2a}{get\+Main\+Char}} () -\/$>$ \mbox{\hyperlink{class_player}{Player}} \&
+\item 
+auto \mbox{\hyperlink{class_game_a204bea9227bd2c78dc49765a6cce4d85}{get\+Enemies}} () -\/$>$ std\+::vector$<$ \mbox{\hyperlink{class_player}{Player}} $>$ \&
+\item 
+auto \mbox{\hyperlink{class_game_a82343c07f786e22d10c544e0aadda056}{get\+Enemy}} () -\/$>$ \mbox{\hyperlink{class_player}{Player}} \&
+\item 
+auto \mbox{\hyperlink{class_game_ae6d066a50b67d4314699554d60ba9ddb}{are\+Enemy\+Pokemons\+Fainted}} () -\/$>$ bool
+\item 
+\mbox{\Hypertarget{class_game_a097abc0da06ee509e63d95dd8b826e49}\label{class_game_a097abc0da06ee509e63d95dd8b826e49}} 
+auto {\bfseries update\+Enemy} () -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Changes current enemy to the next one to fight. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_game_a731170368277a74216fde535d4f56440}\label{class_game_a731170368277a74216fde535d4f56440}} 
+auto {\bfseries set\+Same\+Enemy} () -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Set the same enemy as the enemy for the next fight. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class, that is responsible for holding current state of the game. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_ae6d066a50b67d4314699554d60ba9ddb}\label{class_game_ae6d066a50b67d4314699554d60ba9ddb}} 
+\index{Game@{Game}!areEnemyPokemonsFainted@{areEnemyPokemonsFainted}}
+\index{areEnemyPokemonsFainted@{areEnemyPokemonsFainted}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{areEnemyPokemonsFainted()}{areEnemyPokemonsFainted()}}
+{\footnotesize\ttfamily auto Game\+::are\+Enemy\+Pokemons\+Fainted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ bool}
+
+Returns information, whether all enemy\textquotesingle{}s pokemons are fainted or not \begin{DoxyReturn}{Returns}
+true if Pokemons are fainted, otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_a204bea9227bd2c78dc49765a6cce4d85}\label{class_game_a204bea9227bd2c78dc49765a6cce4d85}} 
+\index{Game@{Game}!getEnemies@{getEnemies}}
+\index{getEnemies@{getEnemies}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getEnemies()}{getEnemies()}}
+{\footnotesize\ttfamily auto Game\+::get\+Enemies (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ std\+::vector$<$\mbox{\hyperlink{class_player}{Player}}$>$ \&}
+
+Returns enemies of the main player \begin{DoxyReturn}{Returns}
+reference to vector of enemies 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_a82343c07f786e22d10c544e0aadda056}\label{class_game_a82343c07f786e22d10c544e0aadda056}} 
+\index{Game@{Game}!getEnemy@{getEnemy}}
+\index{getEnemy@{getEnemy}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getEnemy()}{getEnemy()}}
+{\footnotesize\ttfamily auto Game\+::get\+Enemy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{class_player}{Player}} \&}
+
+Returns enemy, that player is playing against \begin{DoxyReturn}{Returns}
+class \mbox{\hyperlink{class_player}{Player}} -\/ the opponent that player is playing against 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_game_ae67780099a7db3f57af21020ff5eeb2a}\label{class_game_ae67780099a7db3f57af21020ff5eeb2a}} 
+\index{Game@{Game}!getMainChar@{getMainChar}}
+\index{getMainChar@{getMainChar}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{getMainChar()}{getMainChar()}}
+{\footnotesize\ttfamily auto Game\+::get\+Main\+Char (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{class_player}{Player}} \&}
+
+Returns reference to instance of the main \mbox{\hyperlink{class_player}{Player}} \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_player}{Player}} -\/ main player 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Game.\+h\item 
+Game.\+cpp\end{DoxyCompactItemize}

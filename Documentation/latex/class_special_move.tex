@@ -1,0 +1,104 @@
+\hypertarget{class_special_move}{}\doxysection{Special\+Move Class Reference}
+\label{class_special_move}\index{SpecialMove@{SpecialMove}}
+
+
+{\ttfamily \#include $<$Pokemon.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_special_move_aeb2764b2aa21342d652fa59483916df5}\label{class_special_move_aeb2764b2aa21342d652fa59483916df5}} 
+{\bfseries Special\+Move} ()
+\begin{DoxyCompactList}\small\item\em Default constructor to create empty special move. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_special_move_a1e05811e965717b34f7910154d3dfc8e}\label{class_special_move_a1e05811e965717b34f7910154d3dfc8e}} 
+{\bfseries Special\+Move} (const std\+::string \&name, const int \&max\+Turns, const int \&real\+Turns\+Played, const int \&max\+Uses, const int \&real\+Uses, const int \&buff\+Strength, const int \&debuff\+Strength, const int \&buff\+HP, const float \&buff\+Dexterity, const float \&debuff\+Dexterity)
+\begin{DoxyCompactList}\small\item\em Constructor with all parameters to create working special move. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_special_move_a2395043e82d9cc6864d70685caee2fca}{execute}} (\mbox{\hyperlink{class_pokemon}{Pokemon}} $\ast$attacking\+Pokemon, \mbox{\hyperlink{class_pokemon}{Pokemon}} $\ast$defending\+Pokemon) -\/$>$ void
+\item 
+auto \mbox{\hyperlink{class_special_move_a8f43c2fd66cdbfc59d502f831081a485}{undo}} (\mbox{\hyperlink{class_pokemon}{Pokemon}} $\ast$attacking\+Pokemon, \mbox{\hyperlink{class_pokemon}{Pokemon}} $\ast$defending\+Pokemon) -\/$>$ void
+\item 
+auto \mbox{\hyperlink{class_special_move_a92cbf2c22a6380a026f0a88e0fc234e6}{get\+Name}} () -\/$>$ std\+::string
+\item 
+auto \mbox{\hyperlink{class_special_move_af8ab39931ec8387bbed9ab9a444d4b9e}{get\+Uses}} () const -\/$>$ int
+\item 
+auto \mbox{\hyperlink{class_special_move_ab620d3ae84bc1a4e4c96c8ab4b401ba3}{get\+Max\+Uses}} () const -\/$>$ int
+\item 
+auto \mbox{\hyperlink{class_special_move_a59d806461177b99ed583c89e6f830b6e}{get\+Active}} () const -\/$>$ bool
+\item 
+\mbox{\Hypertarget{class_special_move_a2d2e892e9e485848886cd510d33c8c3a}\label{class_special_move_a2d2e892e9e485848886cd510d33c8c3a}} 
+auto {\bfseries update} () -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Update effect of special move, nullifies the effect if enough turns passed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class, that is responsible for Special Move during battles 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_special_move_a2395043e82d9cc6864d70685caee2fca}\label{class_special_move_a2395043e82d9cc6864d70685caee2fca}} 
+\index{SpecialMove@{SpecialMove}!execute@{execute}}
+\index{execute@{execute}!SpecialMove@{SpecialMove}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily auto Special\+Move\+::execute (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pokemon}{Pokemon}} $\ast$}]{attacking\+Pokemon,  }\item[{\mbox{\hyperlink{class_pokemon}{Pokemon}} $\ast$}]{defending\+Pokemon }\end{DoxyParamCaption}) -\/$>$ void}
+
+Executing special power, putting the effect of special power on attacking/defending pokemon 
+\begin{DoxyParams}{Parameters}
+{\em attacking\+Pokemon} & -\/ \mbox{\hyperlink{class_pokemon}{Pokemon}}, that is performing special power \\
+\hline
+{\em defending\+Pokemon} & -\/ \mbox{\hyperlink{class_pokemon}{Pokemon}}, that is against attacking pokemon right now \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_special_move_a59d806461177b99ed583c89e6f830b6e}\label{class_special_move_a59d806461177b99ed583c89e6f830b6e}} 
+\index{SpecialMove@{SpecialMove}!getActive@{getActive}}
+\index{getActive@{getActive}!SpecialMove@{SpecialMove}}
+\doxysubsubsection{\texorpdfstring{getActive()}{getActive()}}
+{\footnotesize\ttfamily auto Special\+Move\+::get\+Active (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ bool}
+
+Checks if special power is active or not \begin{DoxyReturn}{Returns}
+true if special power is active, otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_special_move_ab620d3ae84bc1a4e4c96c8ab4b401ba3}\label{class_special_move_ab620d3ae84bc1a4e4c96c8ab4b401ba3}} 
+\index{SpecialMove@{SpecialMove}!getMaxUses@{getMaxUses}}
+\index{getMaxUses@{getMaxUses}!SpecialMove@{SpecialMove}}
+\doxysubsubsection{\texorpdfstring{getMaxUses()}{getMaxUses()}}
+{\footnotesize\ttfamily auto Special\+Move\+::get\+Max\+Uses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ int}
+
+Returns max amount of uses of special power \begin{DoxyReturn}{Returns}
+int -\/ amount of max uses 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_special_move_a92cbf2c22a6380a026f0a88e0fc234e6}\label{class_special_move_a92cbf2c22a6380a026f0a88e0fc234e6}} 
+\index{SpecialMove@{SpecialMove}!getName@{getName}}
+\index{getName@{getName}!SpecialMove@{SpecialMove}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily auto Special\+Move\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ std\+::string}
+
+Returns a name of special power \begin{DoxyReturn}{Returns}
+string, name of special power 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_special_move_af8ab39931ec8387bbed9ab9a444d4b9e}\label{class_special_move_af8ab39931ec8387bbed9ab9a444d4b9e}} 
+\index{SpecialMove@{SpecialMove}!getUses@{getUses}}
+\index{getUses@{getUses}!SpecialMove@{SpecialMove}}
+\doxysubsubsection{\texorpdfstring{getUses()}{getUses()}}
+{\footnotesize\ttfamily auto Special\+Move\+::get\+Uses (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ int}
+
+Returns amount of real uses of special power by \mbox{\hyperlink{class_player}{Player}} \begin{DoxyReturn}{Returns}
+int -\/ amount of real uses 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_special_move_a8f43c2fd66cdbfc59d502f831081a485}\label{class_special_move_a8f43c2fd66cdbfc59d502f831081a485}} 
+\index{SpecialMove@{SpecialMove}!undo@{undo}}
+\index{undo@{undo}!SpecialMove@{SpecialMove}}
+\doxysubsubsection{\texorpdfstring{undo()}{undo()}}
+{\footnotesize\ttfamily auto Special\+Move\+::undo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pokemon}{Pokemon}} $\ast$}]{attacking\+Pokemon,  }\item[{\mbox{\hyperlink{class_pokemon}{Pokemon}} $\ast$}]{defending\+Pokemon }\end{DoxyParamCaption}) -\/$>$ void}
+
+Nullifies the effect of the special power 
+\begin{DoxyParams}{Parameters}
+{\em attacking\+Pokemon} & -\/ \mbox{\hyperlink{class_pokemon}{Pokemon}}, that was performing special power \\
+\hline
+{\em defending\+Pokemon} & -\/ \mbox{\hyperlink{class_pokemon}{Pokemon}}, that was against attacking pokemon \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Pokemon.\+h\item 
+Pokemon.\+cpp\end{DoxyCompactItemize}

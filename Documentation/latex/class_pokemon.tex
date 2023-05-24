@@ -1,0 +1,245 @@
+\hypertarget{class_pokemon}{}\doxysection{Pokemon Class Reference}
+\label{class_pokemon}\index{Pokemon@{Pokemon}}
+
+
+Class, that is responsible for Pokemons instances.  
+
+
+
+
+{\ttfamily \#include $<$Pokemon.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pokemon_a059e2fca08b08cd218c262f937399ed9}{Pokemon}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor to create empty \mbox{\hyperlink{class_pokemon}{Pokemon}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pokemon_a9f7ce4caea72db8cfa02e4bf909d7605}\label{class_pokemon_a9f7ce4caea72db8cfa02e4bf909d7605}} 
+{\bfseries Pokemon} (const std\+::string \&name, const Type \&type, const int \&strength, const int \&health\+Points, const int \&exp, const float \&dexterity, const bool \&fainted, const \mbox{\hyperlink{class_special_move}{Special\+Move}} \&special\+Move)
+\begin{DoxyCompactList}\small\item\em Constructor with all parameters to create specific \mbox{\hyperlink{class_pokemon}{Pokemon}}. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_pokemon_a7e24669cce45291e9a9b625b567d4d93}{attack\+Move}} (\mbox{\hyperlink{class_pokemon}{Pokemon}} $\ast$defending\+Pokemon) -\/$>$ int
+\item 
+auto \mbox{\hyperlink{class_pokemon_a74ff1c068c38bcccf12856807b54304a}{special\+Attack\+Move}} (\mbox{\hyperlink{class_pokemon}{Pokemon}} $\ast$attacking\+Pokemon, \mbox{\hyperlink{class_pokemon}{Pokemon}} $\ast$defending\+Pokemon) -\/$>$ void
+\item 
+\mbox{\Hypertarget{class_pokemon_a9b6d8c24377f0aa4feac9982e87b0a5e}\label{class_pokemon_a9b6d8c24377f0aa4feac9982e87b0a5e}} 
+auto {\bfseries check\+Evolution} () -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Checks, if the \mbox{\hyperlink{class_pokemon}{Pokemon}} has enough experience to evolve, evolve if it\textquotesingle{}s true. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_pokemon_a9852e729f7996c3da94a613e7c6dc456}\label{class_pokemon_a9852e729f7996c3da94a613e7c6dc456}} 
+auto {\bfseries evolve} () -\/$>$ void
+\begin{DoxyCompactList}\small\item\em Evolving \mbox{\hyperlink{class_pokemon}{Pokemon}}, giving player options to choose, which attribute to upgrade. \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{class_pokemon_a9385fb36e610b1445b30900c46738ead}{buff\+Strength}} (int buff\+Strength) -\/$>$ void
+\item 
+auto \mbox{\hyperlink{class_pokemon_a6ed2e556774d501cad9c74c1e6b69b53}{buff\+Dexterity}} (float buff\+Dexterity) -\/$>$ void
+\item 
+auto \mbox{\hyperlink{class_pokemon_a2acac6d0deee92059956cb7b364900a6}{debuff\+Strength}} (int debuff\+Strength) -\/$>$ void
+\item 
+auto \mbox{\hyperlink{class_pokemon_aa22d5838778b79b631b82e59399217ce}{debuff\+Dexterity}} (float debuff\+Dexterity) -\/$>$ void
+\item 
+auto \mbox{\hyperlink{class_pokemon_a7c70a83367877084c1bc184592987a06}{buff\+HP}} (int buff\+HP) -\/$>$ void
+\item 
+auto \mbox{\hyperlink{class_pokemon_a93d154ff0f8e954a9c8eea8781575df4}{get\+Name}} () -\/$>$ std\+::string
+\item 
+auto \mbox{\hyperlink{class_pokemon_a1d825c3cf36b95d8f3bd150115361e6a}{get\+Type}} () -\/$>$ Type
+\item 
+auto \mbox{\hyperlink{class_pokemon_adaf2a03d8c4394fd30d0c3a7be2cf4f8}{get\+Special\+Move}} () -\/$>$ \mbox{\hyperlink{class_special_move}{Special\+Move}} \&
+\item 
+auto \mbox{\hyperlink{class_pokemon_a8fbd4fc237fff8bdf6a1ac9b5e532458}{get\+Info}} () -\/$>$ std\+::string
+\item 
+auto \mbox{\hyperlink{class_pokemon_acc429406b96a07e43f9ed86c783edd2a}{get\+HP}} () const -\/$>$ int
+\item 
+auto \mbox{\hyperlink{class_pokemon_a488c7aeb85ed9463c32b7002a8fd1286}{get\+Strength}} () const -\/$>$ int
+\item 
+auto \mbox{\hyperlink{class_pokemon_a0d030c2b620733354346710c20ca4a25}{is\+Fainted}} () const -\/$>$ bool
+\item 
+auto \mbox{\hyperlink{class_pokemon_a4f19938e56074093e3945c806876cb72}{get\+Dexterity}} () -\/$>$ float
+\item 
+auto \mbox{\hyperlink{class_pokemon_abd56b7e2d8330b9fc4638f6dc073dc3c}{get\+Exp}} () -\/$>$ int
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class, that is responsible for Pokemons instances. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_pokemon_a059e2fca08b08cd218c262f937399ed9}\label{class_pokemon_a059e2fca08b08cd218c262f937399ed9}} 
+\index{Pokemon@{Pokemon}!Pokemon@{Pokemon}}
+\index{Pokemon@{Pokemon}!Pokemon@{Pokemon}}
+\doxysubsubsection{\texorpdfstring{Pokemon()}{Pokemon()}}
+{\footnotesize\ttfamily Pokemon\+::\+Pokemon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor to create empty \mbox{\hyperlink{class_pokemon}{Pokemon}}. 
+
+Default constructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pokemon_a7e24669cce45291e9a9b625b567d4d93}\label{class_pokemon_a7e24669cce45291e9a9b625b567d4d93}} 
+\index{Pokemon@{Pokemon}!attackMove@{attackMove}}
+\index{attackMove@{attackMove}!Pokemon@{Pokemon}}
+\doxysubsubsection{\texorpdfstring{attackMove()}{attackMove()}}
+{\footnotesize\ttfamily auto Pokemon\+::attack\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pokemon}{Pokemon}} $\ast$}]{defending\+Pokemon }\end{DoxyParamCaption}) -\/$>$ int}
+
+Executing default attack via counting amount of damage 
+\begin{DoxyParams}{Parameters}
+{\em defending\+Pokemon} & -\/ pokemon against the pokemon, that is using attack \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int -\/ amount of dealt damage 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pokemon_a6ed2e556774d501cad9c74c1e6b69b53}\label{class_pokemon_a6ed2e556774d501cad9c74c1e6b69b53}} 
+\index{Pokemon@{Pokemon}!buffDexterity@{buffDexterity}}
+\index{buffDexterity@{buffDexterity}!Pokemon@{Pokemon}}
+\doxysubsubsection{\texorpdfstring{buffDexterity()}{buffDexterity()}}
+{\footnotesize\ttfamily void Pokemon\+::buff\+Dexterity (\begin{DoxyParamCaption}\item[{float}]{buff\+Dexterity }\end{DoxyParamCaption}) -\/$>$ void}
+
+Increasing \mbox{\hyperlink{class_pokemon}{Pokemon}}\textquotesingle{}s dexterity 
+\begin{DoxyParams}{Parameters}
+{\em buff\+Dexterity} & -\/ float, amount of on how much the dexterity will be increased \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pokemon_a7c70a83367877084c1bc184592987a06}\label{class_pokemon_a7c70a83367877084c1bc184592987a06}} 
+\index{Pokemon@{Pokemon}!buffHP@{buffHP}}
+\index{buffHP@{buffHP}!Pokemon@{Pokemon}}
+\doxysubsubsection{\texorpdfstring{buffHP()}{buffHP()}}
+{\footnotesize\ttfamily auto Pokemon\+::buff\+HP (\begin{DoxyParamCaption}\item[{int}]{buff\+HP }\end{DoxyParamCaption}) -\/$>$ void}
+
+Increasing \mbox{\hyperlink{class_pokemon}{Pokemon}}\textquotesingle{}s health points 
+\begin{DoxyParams}{Parameters}
+{\em buff\+HP} & -\/ int, amount on how much the health will be increased \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pokemon_a9385fb36e610b1445b30900c46738ead}\label{class_pokemon_a9385fb36e610b1445b30900c46738ead}} 
+\index{Pokemon@{Pokemon}!buffStrength@{buffStrength}}
+\index{buffStrength@{buffStrength}!Pokemon@{Pokemon}}
+\doxysubsubsection{\texorpdfstring{buffStrength()}{buffStrength()}}
+{\footnotesize\ttfamily void Pokemon\+::buff\+Strength (\begin{DoxyParamCaption}\item[{int}]{buff\+Strength }\end{DoxyParamCaption}) -\/$>$ void}
+
+Increasing \mbox{\hyperlink{class_pokemon}{Pokemon}}\textquotesingle{}s strength 
+\begin{DoxyParams}{Parameters}
+{\em buff\+Strength} & -\/ int,amount of on how much the strength will be increased \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pokemon_aa22d5838778b79b631b82e59399217ce}\label{class_pokemon_aa22d5838778b79b631b82e59399217ce}} 
+\index{Pokemon@{Pokemon}!debuffDexterity@{debuffDexterity}}
+\index{debuffDexterity@{debuffDexterity}!Pokemon@{Pokemon}}
+\doxysubsubsection{\texorpdfstring{debuffDexterity()}{debuffDexterity()}}
+{\footnotesize\ttfamily auto Pokemon\+::debuff\+Dexterity (\begin{DoxyParamCaption}\item[{float}]{debuff\+Dexterity }\end{DoxyParamCaption}) -\/$>$ void}
+
+Decreasing \mbox{\hyperlink{class_pokemon}{Pokemon}}\textquotesingle{}s dexterity 
+\begin{DoxyParams}{Parameters}
+{\em debuff\+Dexterity} & -\/ float, amount on how much the dexterity will be decreased \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pokemon_a2acac6d0deee92059956cb7b364900a6}\label{class_pokemon_a2acac6d0deee92059956cb7b364900a6}} 
+\index{Pokemon@{Pokemon}!debuffStrength@{debuffStrength}}
+\index{debuffStrength@{debuffStrength}!Pokemon@{Pokemon}}
+\doxysubsubsection{\texorpdfstring{debuffStrength()}{debuffStrength()}}
+{\footnotesize\ttfamily auto Pokemon\+::debuff\+Strength (\begin{DoxyParamCaption}\item[{int}]{debuff\+Strength }\end{DoxyParamCaption}) -\/$>$ void}
+
+Decreasing \mbox{\hyperlink{class_pokemon}{Pokemon}}\textquotesingle{}s strength 
+\begin{DoxyParams}{Parameters}
+{\em debuff\+Strength} & -\/ int, amount on how much the strength will be decreased \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pokemon_a4f19938e56074093e3945c806876cb72}\label{class_pokemon_a4f19938e56074093e3945c806876cb72}} 
+\index{Pokemon@{Pokemon}!getDexterity@{getDexterity}}
+\index{getDexterity@{getDexterity}!Pokemon@{Pokemon}}
+\doxysubsubsection{\texorpdfstring{getDexterity()}{getDexterity()}}
+{\footnotesize\ttfamily auto Pokemon\+::get\+Dexterity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ float}
+
+Returns \mbox{\hyperlink{class_pokemon}{Pokemon}}\textquotesingle{}s dexterity \begin{DoxyReturn}{Returns}
+float -\/ amount of pokemon\textquotesingle{}s dexterity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pokemon_abd56b7e2d8330b9fc4638f6dc073dc3c}\label{class_pokemon_abd56b7e2d8330b9fc4638f6dc073dc3c}} 
+\index{Pokemon@{Pokemon}!getExp@{getExp}}
+\index{getExp@{getExp}!Pokemon@{Pokemon}}
+\doxysubsubsection{\texorpdfstring{getExp()}{getExp()}}
+{\footnotesize\ttfamily auto Pokemon\+::get\+Exp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ int}
+
+Returns \mbox{\hyperlink{class_pokemon}{Pokemon}}\textquotesingle{}s experience \begin{DoxyReturn}{Returns}
+int -\/ amount of pokemon\textquotesingle{}s experience 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pokemon_acc429406b96a07e43f9ed86c783edd2a}\label{class_pokemon_acc429406b96a07e43f9ed86c783edd2a}} 
+\index{Pokemon@{Pokemon}!getHP@{getHP}}
+\index{getHP@{getHP}!Pokemon@{Pokemon}}
+\doxysubsubsection{\texorpdfstring{getHP()}{getHP()}}
+{\footnotesize\ttfamily auto Pokemon\+::get\+HP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ int}
+
+Returns \mbox{\hyperlink{class_pokemon}{Pokemon}}\textquotesingle{}s health points \begin{DoxyReturn}{Returns}
+-\/ int -\/ amount of pokemon\textquotesingle{}s health points 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pokemon_a8fbd4fc237fff8bdf6a1ac9b5e532458}\label{class_pokemon_a8fbd4fc237fff8bdf6a1ac9b5e532458}} 
+\index{Pokemon@{Pokemon}!getInfo@{getInfo}}
+\index{getInfo@{getInfo}!Pokemon@{Pokemon}}
+\doxysubsubsection{\texorpdfstring{getInfo()}{getInfo()}}
+{\footnotesize\ttfamily auto Pokemon\+::get\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ std\+::string}
+
+Returns information about the \mbox{\hyperlink{class_pokemon}{Pokemon}} as string \begin{DoxyReturn}{Returns}
+string -\/ name, type, health, strength, dexterity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pokemon_a93d154ff0f8e954a9c8eea8781575df4}\label{class_pokemon_a93d154ff0f8e954a9c8eea8781575df4}} 
+\index{Pokemon@{Pokemon}!getName@{getName}}
+\index{getName@{getName}!Pokemon@{Pokemon}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily auto Pokemon\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ std\+::string}
+
+Returns \mbox{\hyperlink{class_pokemon}{Pokemon}}\textquotesingle{}s name \begin{DoxyReturn}{Returns}
+string -\/ pokemon\textquotesingle{}s name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pokemon_adaf2a03d8c4394fd30d0c3a7be2cf4f8}\label{class_pokemon_adaf2a03d8c4394fd30d0c3a7be2cf4f8}} 
+\index{Pokemon@{Pokemon}!getSpecialMove@{getSpecialMove}}
+\index{getSpecialMove@{getSpecialMove}!Pokemon@{Pokemon}}
+\doxysubsubsection{\texorpdfstring{getSpecialMove()}{getSpecialMove()}}
+{\footnotesize\ttfamily auto Pokemon\+::get\+Special\+Move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ \mbox{\hyperlink{class_special_move}{Special\+Move}} \&}
+
+Returns \mbox{\hyperlink{class_pokemon}{Pokemon}}\textquotesingle{}s special move \begin{DoxyReturn}{Returns}
+reference to \mbox{\hyperlink{class_special_move}{Special\+Move}} of \mbox{\hyperlink{class_pokemon}{Pokemon}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pokemon_a488c7aeb85ed9463c32b7002a8fd1286}\label{class_pokemon_a488c7aeb85ed9463c32b7002a8fd1286}} 
+\index{Pokemon@{Pokemon}!getStrength@{getStrength}}
+\index{getStrength@{getStrength}!Pokemon@{Pokemon}}
+\doxysubsubsection{\texorpdfstring{getStrength()}{getStrength()}}
+{\footnotesize\ttfamily auto Pokemon\+::get\+Strength (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ int}
+
+Returns \mbox{\hyperlink{class_pokemon}{Pokemon}}\textquotesingle{}s strength \begin{DoxyReturn}{Returns}
+int-\/ amount of pokemon\textquotesingle{}s strength 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pokemon_a1d825c3cf36b95d8f3bd150115361e6a}\label{class_pokemon_a1d825c3cf36b95d8f3bd150115361e6a}} 
+\index{Pokemon@{Pokemon}!getType@{getType}}
+\index{getType@{getType}!Pokemon@{Pokemon}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily auto Pokemon\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) -\/$>$ Type}
+
+Returns \mbox{\hyperlink{class_pokemon}{Pokemon}}\textquotesingle{}s type \begin{DoxyReturn}{Returns}
+type -\/ enum, from which it is possible to understand, whether the pokemon has a weakness towards enemy or not 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pokemon_a0d030c2b620733354346710c20ca4a25}\label{class_pokemon_a0d030c2b620733354346710c20ca4a25}} 
+\index{Pokemon@{Pokemon}!isFainted@{isFainted}}
+\index{isFainted@{isFainted}!Pokemon@{Pokemon}}
+\doxysubsubsection{\texorpdfstring{isFainted()}{isFainted()}}
+{\footnotesize\ttfamily auto Pokemon\+::is\+Fainted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const -\/$>$ bool}
+
+Returns information about has the \mbox{\hyperlink{class_pokemon}{Pokemon}} fainted or not \begin{DoxyReturn}{Returns}
+true if \mbox{\hyperlink{class_pokemon}{Pokemon}} is fainted, otherwise false 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pokemon_a74ff1c068c38bcccf12856807b54304a}\label{class_pokemon_a74ff1c068c38bcccf12856807b54304a}} 
+\index{Pokemon@{Pokemon}!specialAttackMove@{specialAttackMove}}
+\index{specialAttackMove@{specialAttackMove}!Pokemon@{Pokemon}}
+\doxysubsubsection{\texorpdfstring{specialAttackMove()}{specialAttackMove()}}
+{\footnotesize\ttfamily auto Pokemon\+::special\+Attack\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_pokemon}{Pokemon}} $\ast$}]{attacking\+Pokemon,  }\item[{\mbox{\hyperlink{class_pokemon}{Pokemon}} $\ast$}]{defending\+Pokemon }\end{DoxyParamCaption}) -\/$>$ void}
+
+Executing the special attack 
+\begin{DoxyParams}{Parameters}
+{\em attacking\+Pokemon} & -\/ \mbox{\hyperlink{class_pokemon}{Pokemon}}, that used the special ability \\
+\hline
+{\em defending\+Pokemon} & -\/ \mbox{\hyperlink{class_pokemon}{Pokemon}}, that suffering consequences(gets debuff) \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Pokemon.\+h\item 
+Pokemon.\+cpp\end{DoxyCompactItemize}

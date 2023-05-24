@@ -1,0 +1,134 @@
+\hypertarget{_pokemon_8h_source}{}\doxysection{Pokemon.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef POKEMONV0\_5\_POKEMON\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define POKEMONV0\_5\_POKEMON\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <utility>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{9 \textcolor{keyword}{enum} Type \{}
+\DoxyCodeLine{10     Water = 0,}
+\DoxyCodeLine{11     Earth = 1,}
+\DoxyCodeLine{12     Air = 2,}
+\DoxyCodeLine{13     Fire = 3,}
+\DoxyCodeLine{14     Ice = 4,}
+\DoxyCodeLine{15     Steel = 5}
+\DoxyCodeLine{16 \};}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{keyword}{class }\mbox{\hyperlink{class_pokemon}{Pokemon}};}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{23 \textcolor{keyword}{class }\mbox{\hyperlink{class_special_move}{SpecialMove}} \{}
+\DoxyCodeLine{24 \textcolor{keyword}{private}:}
+\DoxyCodeLine{25     std::string name;}
+\DoxyCodeLine{26     \textcolor{keywordtype}{int} maxTurns;}
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} realTurnsPlayed; \textcolor{comment}{// >= 1, 1 is a turn when you used Special Move}}
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} maxUses;}
+\DoxyCodeLine{29     \textcolor{keywordtype}{int} realUses;}
+\DoxyCodeLine{30     \textcolor{keywordtype}{int} buffStrength;}
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} debuffStrength;}
+\DoxyCodeLine{32     \textcolor{keywordtype}{int} buffHP;}
+\DoxyCodeLine{33     \textcolor{keywordtype}{float} buffDexterity;}
+\DoxyCodeLine{34     \textcolor{keywordtype}{float} debuffDexterity;}
+\DoxyCodeLine{35     \textcolor{keywordtype}{bool} active;}
+\DoxyCodeLine{36     \mbox{\hyperlink{class_pokemon}{Pokemon}} *attackingPokemon;}
+\DoxyCodeLine{37     \mbox{\hyperlink{class_pokemon}{Pokemon}} *defendingPokemon;}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{keyword}{public}:}
+\DoxyCodeLine{41     \mbox{\hyperlink{class_special_move_aeb2764b2aa21342d652fa59483916df5}{SpecialMove}}();}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{44     \mbox{\hyperlink{class_special_move_aeb2764b2aa21342d652fa59483916df5}{SpecialMove}}(\textcolor{keyword}{const} std::string \&name,}
+\DoxyCodeLine{45                 \textcolor{keyword}{const} \textcolor{keywordtype}{int} \&maxTurns,}
+\DoxyCodeLine{46                 \textcolor{keyword}{const} \textcolor{keywordtype}{int} \&realTurnsPlayed,}
+\DoxyCodeLine{47                 \textcolor{keyword}{const} \textcolor{keywordtype}{int} \&maxUses,}
+\DoxyCodeLine{48                 \textcolor{keyword}{const} \textcolor{keywordtype}{int} \&realUses,}
+\DoxyCodeLine{49                 \textcolor{keyword}{const} \textcolor{keywordtype}{int} \&buffStrength,}
+\DoxyCodeLine{50                 \textcolor{keyword}{const} \textcolor{keywordtype}{int} \&debuffStrength,}
+\DoxyCodeLine{51                 \textcolor{keyword}{const} \textcolor{keywordtype}{int} \&buffHP,}
+\DoxyCodeLine{52                 \textcolor{keyword}{const} \textcolor{keywordtype}{float} \&buffDexterity,}
+\DoxyCodeLine{53                 \textcolor{keyword}{const} \textcolor{keywordtype}{float} \&debuffDexterity);}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{58     \textcolor{keyword}{auto} \mbox{\hyperlink{class_special_move_a2395043e82d9cc6864d70685caee2fca}{execute}}(\mbox{\hyperlink{class_pokemon}{Pokemon}} *attackingPokemon, \mbox{\hyperlink{class_pokemon}{Pokemon}} *defendingPokemon) -\/> void;}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{63     \textcolor{keyword}{auto} \mbox{\hyperlink{class_special_move_a8f43c2fd66cdbfc59d502f831081a485}{undo}}(\mbox{\hyperlink{class_pokemon}{Pokemon}} *attackingPokemon, \mbox{\hyperlink{class_pokemon}{Pokemon}} *defendingPokemon) -\/> void;}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{67     \textcolor{keyword}{auto} \mbox{\hyperlink{class_special_move_a92cbf2c22a6380a026f0a88e0fc234e6}{getName}}() -\/> std::string;}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{71     \textcolor{keyword}{auto} \mbox{\hyperlink{class_special_move_af8ab39931ec8387bbed9ab9a444d4b9e}{getUses}}() \textcolor{keyword}{const} -\/> int;}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{75     \textcolor{keyword}{auto} \mbox{\hyperlink{class_special_move_ab620d3ae84bc1a4e4c96c8ab4b401ba3}{getMaxUses}}() \textcolor{keyword}{const} -\/> int;}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{79     \textcolor{keyword}{auto} \mbox{\hyperlink{class_special_move_a59d806461177b99ed583c89e6f830b6e}{getActive}}() \textcolor{keyword}{const} -\/> bool;}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{82     \textcolor{keyword}{auto} \mbox{\hyperlink{class_special_move_a2d2e892e9e485848886cd510d33c8c3a}{update}}() -\/> void;}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{84 \};}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{87 \textcolor{keyword}{class }\mbox{\hyperlink{class_pokemon}{Pokemon}} \{}
+\DoxyCodeLine{88 \textcolor{keyword}{private}:}
+\DoxyCodeLine{89     std::string name;}
+\DoxyCodeLine{90     Type type;}
+\DoxyCodeLine{91     \mbox{\hyperlink{class_special_move}{SpecialMove}} specialMove;}
+\DoxyCodeLine{92     \textcolor{keywordtype}{int} strength;}
+\DoxyCodeLine{93     \textcolor{keywordtype}{int} healthPoints;}
+\DoxyCodeLine{94     \textcolor{keywordtype}{int} exp;}
+\DoxyCodeLine{95     \textcolor{keywordtype}{int} expToLevelUp;}
+\DoxyCodeLine{96     \textcolor{keywordtype}{float} dexterity; \textcolor{comment}{// 0 -\/> 1;}}
+\DoxyCodeLine{97     \textcolor{keywordtype}{bool} fainted;}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{103     \textcolor{keyword}{auto} damage(\mbox{\hyperlink{class_pokemon}{Pokemon}} *defendingPokemon, \textcolor{keywordtype}{int} damage) -\/> int;}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105 \textcolor{keyword}{public}:}
+\DoxyCodeLine{107     \mbox{\hyperlink{class_pokemon_a059e2fca08b08cd218c262f937399ed9}{Pokemon}}();}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{110     \mbox{\hyperlink{class_pokemon_a059e2fca08b08cd218c262f937399ed9}{Pokemon}}(\textcolor{keyword}{const} std::string \&name,}
+\DoxyCodeLine{111             \textcolor{keyword}{const} Type \&type,}
+\DoxyCodeLine{112             \textcolor{keyword}{const} \textcolor{keywordtype}{int} \&strength,}
+\DoxyCodeLine{113             \textcolor{keyword}{const} \textcolor{keywordtype}{int} \&healthPoints,}
+\DoxyCodeLine{114             \textcolor{keyword}{const} \textcolor{keywordtype}{int} \&exp,}
+\DoxyCodeLine{115             \textcolor{keyword}{const} \textcolor{keywordtype}{float} \&dexterity,}
+\DoxyCodeLine{116             \textcolor{keyword}{const} \textcolor{keywordtype}{bool} \&fainted,}
+\DoxyCodeLine{117             \textcolor{keyword}{const} \mbox{\hyperlink{class_special_move}{SpecialMove}} \&specialMove);}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{122     \textcolor{keyword}{auto} \mbox{\hyperlink{class_pokemon_a7e24669cce45291e9a9b625b567d4d93}{attackMove}}(\mbox{\hyperlink{class_pokemon}{Pokemon}} *defendingPokemon) -\/> int;}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{127     \textcolor{keyword}{auto} \mbox{\hyperlink{class_pokemon_a74ff1c068c38bcccf12856807b54304a}{specialAttackMove}}(\mbox{\hyperlink{class_pokemon}{Pokemon}} *attackingPokemon, \mbox{\hyperlink{class_pokemon}{Pokemon}} *defendingPokemon) -\/> void;}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{130     \textcolor{keyword}{auto} \mbox{\hyperlink{class_pokemon_a9b6d8c24377f0aa4feac9982e87b0a5e}{checkEvolution}}() -\/> void;}
+\DoxyCodeLine{131 }
+\DoxyCodeLine{133     \textcolor{keyword}{auto} \mbox{\hyperlink{class_pokemon_a9852e729f7996c3da94a613e7c6dc456}{evolve}}() -\/> void;}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{137     \textcolor{keyword}{auto} \mbox{\hyperlink{class_pokemon_a9385fb36e610b1445b30900c46738ead}{buffStrength}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_pokemon_a9385fb36e610b1445b30900c46738ead}{buffStrength}}) -\/> void;}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{141     \textcolor{keyword}{auto} \mbox{\hyperlink{class_pokemon_a6ed2e556774d501cad9c74c1e6b69b53}{buffDexterity}}(\textcolor{keywordtype}{float} \mbox{\hyperlink{class_pokemon_a6ed2e556774d501cad9c74c1e6b69b53}{buffDexterity}}) -\/> void;}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{145     \textcolor{keyword}{auto} \mbox{\hyperlink{class_pokemon_a2acac6d0deee92059956cb7b364900a6}{debuffStrength}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_pokemon_a2acac6d0deee92059956cb7b364900a6}{debuffStrength}}) -\/> void;}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{149     \textcolor{keyword}{auto} \mbox{\hyperlink{class_pokemon_aa22d5838778b79b631b82e59399217ce}{debuffDexterity}}(\textcolor{keywordtype}{float} \mbox{\hyperlink{class_pokemon_aa22d5838778b79b631b82e59399217ce}{debuffDexterity}}) -\/> void;}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{153     \textcolor{keyword}{auto} \mbox{\hyperlink{class_pokemon_a7c70a83367877084c1bc184592987a06}{buffHP}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_pokemon_a7c70a83367877084c1bc184592987a06}{buffHP}}) -\/> void;}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{157     \textcolor{keyword}{auto} \mbox{\hyperlink{class_pokemon_a93d154ff0f8e954a9c8eea8781575df4}{getName}}() -\/> std::string;}
+\DoxyCodeLine{158 }
+\DoxyCodeLine{161     \textcolor{keyword}{auto} \mbox{\hyperlink{class_pokemon_a1d825c3cf36b95d8f3bd150115361e6a}{getType}}() -\/> Type;}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{165     \textcolor{keyword}{auto} \mbox{\hyperlink{class_pokemon_adaf2a03d8c4394fd30d0c3a7be2cf4f8}{getSpecialMove}}() -\/> \mbox{\hyperlink{class_special_move}{SpecialMove}} \&;}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{169     \textcolor{keyword}{auto} \mbox{\hyperlink{class_pokemon_a8fbd4fc237fff8bdf6a1ac9b5e532458}{getInfo}}() -\/> std::string;}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{173     \textcolor{keyword}{auto} \mbox{\hyperlink{class_pokemon_acc429406b96a07e43f9ed86c783edd2a}{getHP}}() \textcolor{keyword}{const} -\/> int;}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{177     \textcolor{keyword}{auto} \mbox{\hyperlink{class_pokemon_a488c7aeb85ed9463c32b7002a8fd1286}{getStrength}}() \textcolor{keyword}{const} -\/> int;}
+\DoxyCodeLine{178 }
+\DoxyCodeLine{181     \textcolor{keyword}{auto} \mbox{\hyperlink{class_pokemon_a0d030c2b620733354346710c20ca4a25}{isFainted}}() \textcolor{keyword}{const} -\/> bool;}
+\DoxyCodeLine{182 }
+\DoxyCodeLine{185     \textcolor{keyword}{auto} \mbox{\hyperlink{class_pokemon_a4f19938e56074093e3945c806876cb72}{getDexterity}}() -\/> float;}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{189     \textcolor{keyword}{auto} \mbox{\hyperlink{class_pokemon_abd56b7e2d8330b9fc4638f6dc073dc3c}{getExp}}() -\/> int;}
+\DoxyCodeLine{190 \};}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192 }
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#endif }\textcolor{comment}{//POKEMONV0\_5\_POKEMON\_H}}
+
+\end{DoxyCode}

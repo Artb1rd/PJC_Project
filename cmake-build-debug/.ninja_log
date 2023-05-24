@@ -1,0 +1,11 @@
+# ninja log v5
+4	1990	6773609995632387	CMakeFiles/Pokemonv0_5.dir/main.cpp.obj	ec2bb87dab5b5564
+64	1497	6773609990723745	CMakeFiles/Pokemonv0_5.dir/Player.cpp.obj	2b955ddcd2ec6c01
+16	2077	6768555829890729	CMakeFiles/Pokemonv0_5.dir/Pokemon/Pokemon.cpp.obj	ec1672ad7c04b19f
+3	764	6776352801682709	CMakeFiles/Pokemonv0_5.dir/Game.cpp.obj	cbb17acd39f5e0b4
+18	1243	6768555821530297	CMakeFiles/Pokemonv0_5.dir/Player/Player.cpp.obj	3045320952de1574
+21	1352	6768555822620021	CMakeFiles/Pokemonv0_5.dir/Engine/Game.cpp.obj	c163e4adb9dcbd98
+23	2824	6768555837374375	CMakeFiles/Pokemonv0_5.dir/Engine/Engine.cpp.obj	8a17b1bf5d19d35b
+764	1207	6776352806081506	Pokemonv0_5.exe	a0b42af484315d9b
+4	2381	6776193000615657	CMakeFiles/Pokemonv0_5.dir/Pokemon.cpp.obj	e43206f9ca897be0
+3	2528	6776211165266086	CMakeFiles/Pokemonv0_5.dir/Engine.cpp.obj	4a59c7bf8391598c
